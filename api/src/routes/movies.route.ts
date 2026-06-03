@@ -19,7 +19,7 @@ router.get("/list", async (req, res) => {
 
   const result = await query.select(field);
 
-  res.status(200).json({ result: result, message: "Fetched successfully", k });
+  res.status(200).json({ result: result, message: "Fetched successfully" });
 });
 
 router.post("/saveMovie", async (req, res) => {
