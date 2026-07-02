@@ -7,6 +7,25 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: 3004,
+    strictPort: true,
+    allowedHosts: true,
     open: true,
+    proxy: {
+      "/movies": {
+        target: "http://localhost:8004",
+        changeOrigin: true,
+      },
+    },
+  },
+  preview: {
+    port: 3004,
+    strictPort: true,
+    allowedHosts: true,
+    proxy: {
+      "/movies": {
+        target: "http://localhost:8004",
+        changeOrigin: true,
+      },
+    },
   },
 });

@@ -1,0 +1,8 @@
+version: 3
+tunnels:
+  api:
+    addr: 8004
+    proto: http
+  ui:
+    addr: 3004
+    proto: http
